@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import BlogForm from "./BlogForm/BlogForm";
 import BlogList from "./BlogList/BlogList";
 
 export default function AppMain() {
@@ -84,14 +83,14 @@ export default function AppMain() {
 
 
   return (
-    <div className="app">
-      <h1>React Blog Form</h1>
-      <BlogForm />
-      <BlogList
-        articlesCalled={articlesCalled}
-        onDelete={deleteArticleCalled}
-        onUpdate={updateArticle}
-      />
-    </div>
+    <>
+      <div className="app">
+        <BlogList
+          articlesCalled={articlesCalled}
+          onDelete={deleteArticleCalled}
+          onUpdate={updateArticle}
+        />
+      </div>
+    </>
   );
 }

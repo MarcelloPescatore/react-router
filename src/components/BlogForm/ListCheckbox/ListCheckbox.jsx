@@ -8,7 +8,7 @@ export default function ListCheckbox({ tags, setTags }) {
         }
     };
 
-    const availableTags = ["Tech", "Lifestyle", "Education", "Entertainment"];
+    const availableTags = ["Dolci", "Primi Piatti", "Torte", "Ricette al Forno"];
 
     return (
         <ul>

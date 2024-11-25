@@ -117,7 +117,7 @@ export default function BlogForm() {
                     <option value="published">Published</option>
                 </select>
 
-                <button type="submit">Add Article</button>
+                <button type="submit">Add Posts</button>
             </div>
             {/* Gestione tags via component ListCheckbox */}
             <ListCheckbox
