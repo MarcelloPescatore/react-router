@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BlogList from "./BlogList/BlogList";
+import { Link } from 'react-router-dom';
 
 export default function AppMain() {
   // const [articles, setArticles] = useState([]);
@@ -85,6 +86,9 @@ export default function AppMain() {
   return (
     <>
       <div className="app">
+        <Link to='/posts/create' className="btn btn-primary btn-lg mt-2">
+            Add more posts
+        </Link>
         <BlogList
           articlesCalled={articlesCalled}
           onDelete={deleteArticleCalled}

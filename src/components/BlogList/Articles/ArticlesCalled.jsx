@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function ArticlesCalled({ articlesCalled, handleChange, handleEdit, handleUpdate, handlePublish, setEditingId, editingId, editingData, onDelete }) {
     return (
         <>
@@ -42,11 +44,13 @@ export default function ArticlesCalled({ articlesCalled, handleChange, handleEdi
                     ) : (
                         <>
                             <h3>{article.title}</h3>
-                            <img src={imageUrl} alt="post image" />
-                            <p>Slug: {article.slug}</p>
-                            <p>Status: {article.status}</p>
-                            <p>Content: {article.content}</p>
-                            <p>Tags: {(article.tags || []).join(', ')}</p>
+                            <Link to={`/posts/${article.slug}`}>
+                                <img src={imageUrl} alt="post image" />
+                            </Link>
+                            <p><strong>Slug:</strong> {article.slug}</p>
+                            <p><strong>Status:</strong>  {article.status}</p>
+                            <p><strong>Content:</strong>  {article.content}</p>
+                            <p><strong>Tags:</strong>  {(article.tags || []).join(', ')}</p>
 
                             <div className="buttons">
                                 <button onClick={() => handleEdit(article)}>Edit</button>
@@ -58,6 +62,9 @@ export default function ArticlesCalled({ articlesCalled, handleChange, handleEdi
                                         Publish
                                     </button>
                                 )}
+                                <Link to={`/posts/${article.slug}`}>
+                                    <button>View Page</button>
+                                </Link>
                             </div>
                         </>
                     )}
